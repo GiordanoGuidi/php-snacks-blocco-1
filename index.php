@@ -56,6 +56,13 @@
 //     var_dump($match);
     // var_dump($match['away_team']);
 // }
+//#SNACK 2
+//NULL COALESHING OPERATOR
+$name = $_GET['name'] ?? '';
+$email = $_GET['email'] ?? '';
+$age = $_GET['age'] ?? '';
+
+
 
 
 ?>
