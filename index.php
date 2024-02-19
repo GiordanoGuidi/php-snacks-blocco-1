@@ -1,6 +1,6 @@
 <?php 
 
-$calendar = [
+$matches = [
 
     [
         'home_team'=>[
@@ -13,7 +13,7 @@ $calendar = [
             'points'=> 63,
         ]
 
-        ],
+    ],
     [
         'home_team'=>[
             'name'=> 'monza',
@@ -50,7 +50,13 @@ $calendar = [
         ]
     
     ],
-]
+];
+
+foreach ($matches as $match){
+    var_dump($match['home_team']);
+    var_dump($match['away_team']);
+}
+
 
 ?>
 
@@ -62,9 +68,15 @@ $calendar = [
         <title>Document</title>
     </head>
     <body>
+        <ul>
+            <?php foreach($matches as $match) {?>
+                <li>
+                    <?= $match['home_team']['name']. ' - ', $match['away_team']['name']. ' | ', 
+                    $match['home_team']['points']. ' - ', $match['away_team']['points'] ?>
+                </li>
+            <?php }?>           
+        </ul>
         
-        <p>
-            <?php var_dump($matches_calendar)?>
-        </p>
+        
 </body>
 </html>
