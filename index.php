@@ -85,6 +85,14 @@ $age = $_GET['age'] ?? '';
             <?php }?>           
         </ul> -->
         //#SNACK 2
+        //! VALIDAZIONE
+        <?php if(strlen($name) < 3 || strpos($email, '.') === false 
+        || strpos($email, '@') ===false || !is_numeric($age)) : ?>
+            <p>ACCESSO NEGATO</p>
+            <?php else :?>
+            <p>ACCESSO RIUSCITO</p>
+        <?php endif?>
+
        
         
         
